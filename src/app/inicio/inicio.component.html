@@ -1,6 +1,67 @@
 <h1>DEBERES DE INTERFACES</h1>
-<div class="button-container" *ngIf="showButtons">
-    <button class="btn btn-primary" routerLink='card'>Ir a Deber 1</button>
-</div>
+<div class="conatiner_one">
+    <p>Nombre: Estefany Ordoñez</p>
+    <div class="button-container" *ngIf="showButtons">
 
+        <button class="p-button" routerLink='/matriz-numero-6'>Matriz 6x6</button>
+        <button class="p-button" routerLink='/matriz-numero-5'>Matriz 5x5</button>
+        <button class="p-button" routerLink='/matriz-numero-4'>Matriz 4x4</button>
+        <button class="p-button" routerLink='/matriz-numero-3'>Matriz 3x3</button>
+
+        <button class="p-button" routerLink='/entregable1'>Ir a deber entregable 2</button>
+        <button class="p-button" routerLink='/card'>Ir a deber (CARDS)</button>
+
+    </div>
+</div>
 <router-outlet></router-outlet>
+<style>
+    .conatiner_one {
+        margin: auto;
+        width: 90%;
+        justify-content: center;
+        text-align: center;
+        background-color: #cdcdd3;
+        padding: 10px;
+        border-radius: 1em;
+        height: auto;
+    }
+
+    body {
+        margin: 20px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f0f4f8;
+    }
+
+    h1 {
+        font-size: 5rem;
+        font-weight: bold;
+        color: #000000;
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    .button-container {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        padding: 20px;
+    }
+
+    button {
+        padding: 20px 30px;
+        color: rgb(4, 2, 2);
+        border: 2px solid #202d41;
+        border-radius: 15px;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+</style>
