@@ -1,0 +1,30 @@
+<div class="card">
+    <p-carousel [value]="products" [numVisible]="3" [numScroll]="3" [circular]="false"
+        [responsiveOptions]="responsiveOptions">
+        <ng-template let-product #item>
+            <div class="border border-surface rounded-border m-2 p-4">
+                <div class="mb-4">
+                    <div class="relative mx-auto">
+                        <img src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}"
+                            [alt]="product.name" class="w-full rounded-border" />
+                        <p-tag [value]="product.inventoryStatus" [severity]="getSeverity(product.inventoryStatus)"
+                            class="absolute" styleClass="dark:!bg-surface-900"
+                            [style]="{ 'left': '5px', 'top': '5px' }" />
+                    </div>
+                </div>
+                <div class="mb-4 font-medium">
+                    {{ product.name }}
+                </div>
+                <div class="flex justify-between items-center">
+                    <div class="mt-0 font-semibold text-xl">
+                        {{ '$' + product.price }}
+                    </div>
+                    <span>
+                        <button pButton icon="pi pi-heart" severity="secondary"></button>
+                        <button pButton icon="pi pi-shopping-cart" styleClass="ml-2"></button>
+                    </span>
+                </div>
+            </div>
+        </ng-template>
+    </p-carousel>
+</div>
