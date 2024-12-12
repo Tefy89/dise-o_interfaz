@@ -1,33 +1,61 @@
-<h1>Carrusel</h1>
-<a href="inicio.component.html">
-    <button class="p-button">Volver a la Página de Inicio</button>
-</a><br><br>
-<p-carousel [value]="products" [numVisible]="3" [numScroll]="1" [responsiveOptions]="responsiveOptions"
-    [circular]="true">
-    <ng-template let-product pTemplate="item">
-        <div class="product-item p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-            <!-- Imagen del producto -->
-            <div class="mb-4 overflow-hidden rounded-lg">
-                <img [src]="product.image" [alt]="product.name"
-                    class="w-full h-60 object-cover object-center rounded-lg" />
-            </div>
+<div class="conatiner_one">
+    <div class="container_two">
+        <h1 style="text-align: center;">CARRUSEL</h1>
+    </div>
+    <br>
+    <a href="inicio.component.html">
+        <button class="p-button">Volver a la Página de Inicio</button>
+    </a><br><br>
+    <p-carousel [value]="products" [numVisible]="3" [numScroll]="1" [responsiveOptions]="responsiveOptions"
+        [circular]="true">
+        <ng-template let-product pTemplate="item">
+            <div class="product-item p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                <!-- Imagen del producto -->
+                <div class="mb-4 overflow-hidden rounded-lg">
+                    <img [src]="product.image" [alt]="product.name"
+                        class="w-full h-60 object-cover object-center rounded-lg" />
+                </div>
 
-            <!-- Detalles del producto -->
-            <div class="product-detail text-center">
-                <h4 class="text-xl font-semibold text-gray-800 mb-2">{{ product.name }}</h4>
-                <p class="text-lg text-gray-600 mb-3">${{ product.price }}</p>
+                <!-- Detalles del producto -->
+                <div class="product-detail text-center">
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">{{ product.name }}</h4>
+                    <p class="text-lg text-gray-600 mb-3">${{ product.price }}</p>
 
-                <!-- Estado del inventario -->
-                <p-tag [value]="product.inventoryStatus" [severity]="getSeverity(product.inventoryStatus)"
-                    class="mb-3"></p-tag>
+                    <!-- Estado del inventario -->
+                    <p-tag [value]="product.inventoryStatus" [severity]="getSeverity(product.inventoryStatus)"
+                        class="mb-3"></p-tag>
 
-                <!-- Botones de acción -->
-                <div class="flex justify-center space-x-4">
-                    <p-button icon="pi pi-heart" severity="secondary" [outlined]="true"
-                        class="p-button-rounded p-button-outlined" />
-                    <p-button icon="pi pi-shopping-cart" styleClass="p-button-rounded p-button-outlined" class="ml-2" />
+                    <!-- Botones de acción -->
+                    <div class="flex justify-center space-x-4">
+                        <p-button icon="pi pi-heart" severity="secondary" [outlined]="true"
+                            class="p-button-rounded p-button-outlined" />
+                        <p-button icon="pi pi-shopping-cart" styleClass="p-button-rounded p-button-outlined"
+                            class="ml-2" />
+                    </div>
                 </div>
             </div>
-        </div>
-    </ng-template>
-</p-carousel>
+        </ng-template>
+    </p-carousel>
+</div>
+<style>
+    .conatiner_one {
+        margin: auto;
+        width: 90%;
+        background-color: #eeeef7;
+        padding: 15px;
+        border-radius: 1em;
+        height: auto;
+        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .container_two {
+        background-color: #8ec6ee;
+        padding: 1px;
+        border-radius: 10px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        color: white;
+    }
+</style>

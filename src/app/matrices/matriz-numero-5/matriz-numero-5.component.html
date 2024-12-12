@@ -1,60 +1,82 @@
-<link rel="stylesheet" href="https://unpkg.com/primeflex@latest/primeflex.css">
+<div class="conatiner_one">
+    <div class="container_two">
+        <h1 style="text-align: center;">MATRIZ 5X5</h1>
+    </div>
+    <br>
 
-<h1>MATRIZ DE 5X5</h1>
-<a href="inicio.component.html">
-    <button class="p-button">Volver a la Página de Inicio</button>
-</a>
+    <a href="inicio.component.html">
+        <button class="p-button">Volver a la Página de Inicio</button>
+    </a>
 
-<br><br>
+    <br><br>
 
-<div class="p-grid">
-    <div class="p-col-12 p-md-6 p-lg-2 cuadro">Cuadro 1-1</div>
-    <div class="p-col-12 p-md-6 p-lg-2 cuadro">Cuadro 1-2</div>
-    <div class="p-col-12 p-md-6 p-lg-2 cuadro">Cuadro 1-3</div>
-    <div class="p-col-12 p-md-6 p-lg-2 cuadro">Cuadro 1-4</div>
-    <div class="p-col-12 p-md-6 p-lg-2 cuadro">Cuadro 1-5</div>
-
-    <div class="p-col-12 p-md-6 p-lg-2 cuadro">Cuadro 2-1</div>
-    <div class="p-col-12 p-md-6 p-lg-2 cuadro">Cuadro 2-2</div>
-    <div class="p-col-12 p-md-6 p-lg-2 cuadro">Cuadro 2-3</div>
-    <div class="p-col-12 p-md-6 p-lg-2 cuadro">Cuadro 2-4</div>
-    <div class="p-col-12 p-md-6 p-lg-2 cuadro">Cuadro 2-5</div>
-
-    <div class="p-col-12 p-md-6 p-lg-2 cuadro">Cuadro 3-1</div>
-    <div class="p-col-12 p-md-6 p-lg-2 cuadro">Cuadro 3-2</div>
-    <div class="p-col-12 p-md-6 p-lg-2 cuadro">Cuadro 3-3</div>
-    <div class="p-col-12 p-md-6 p-lg-2 cuadro">Cuadro 3-4</div>
-    <div class="p-col-12 p-md-6 p-lg-2 cuadro">Cuadro 3-5</div>
-
-    <div class="p-col-12 p-md-6 p-lg-2 cuadro">Cuadro 4-1</div>
-    <div class="p-col-12 p-md-6 p-lg-2 cuadro">Cuadro 4-2</div>
-    <div class="p-col-12 p-md-6 p-lg-2 cuadro">Cuadro 4-3</div>
-    <div class="p-col-12 p-md-6 p-lg-2 cuadro">Cuadro 4-4</div>
-    <div class="p-col-12 p-md-6 p-lg-2 cuadro">Cuadro 4-5</div>
-
-    <div class="p-col-12 p-md-6 p-lg-2 cuadro">Cuadro 5-1</div>
-    <div class="p-col-12 p-md-6 p-lg-2 cuadro">Cuadro 5-2</div>
-    <div class="p-col-12 p-md-6 p-lg-2 cuadro">Cuadro 5-3</div>
-    <div class="p-col-12 p-md-6 p-lg-2 cuadro">Cuadro 5-4</div>
-    <div class="p-col-12 p-md-6 p-lg-2 cuadro">Cuadro 5-5</div>
+    <div class="grid-container grid-5x5">
+        <div class="grid-item red"></div>
+        <div class="grid-item red"></div>
+        <div class="grid-item red"></div>
+        <div class="grid-item red"></div>
+        <div class="grid-item red"></div>
+        <div class="grid-item red"></div>
+        <div class="grid-item red"></div>
+        <div class="grid-item red"></div>
+        <div class="grid-item red"></div>
+        <div class="grid-item red"></div>
+        <div class="grid-item red"></div>
+        <div class="grid-item red"></div>
+        <div class="grid-item red"></div>
+        <div class="grid-item red"></div>
+        <div class="grid-item red"></div>
+        <div class="grid-item red"></div>
+        <div class="grid-item red"></div>
+        <div class="grid-item red"></div>
+        <div class="grid-item red"></div>
+        <div class="grid-item red"></div>
+    </div>
 </div>
-
 <style>
-    .p-grid {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        /* Cambia a 5 columnas */
-        gap: 15px;
+    .conatiner_one {
+        margin: auto;
+        width: 90%;
+        background-color: #eeeef7;
+        padding: 15px;
+        border-radius: 1em;
+        height: auto;
+        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
     }
 
-    .cuadro {
-        max-width: 100%;
-        background-color: #c35b5b;
-        border: 1px solid #ccc;
-        border-radius: 15px;
-        text-align: center;
-        font-size: 1em;
-        padding: 5px;
-        height: 100px;
+    .container_two {
+        background-color: #8ec6ee;
+        padding: 1px;
+        border-radius: 10px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        color: white;
+    }
+
+    .grid-container {
+        display: grid;
+        gap: 10px;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .grid-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+    }
+
+    .grid-5x5 {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        width: 80%;
+        height: 800px;
+    }
+
+    .grid-5x5 .grid-item.red {
+        background-color: #9978ed;
     }
 </style>

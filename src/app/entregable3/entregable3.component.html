@@ -1,21 +1,95 @@
-<h1 style="text-align: center;font-size:2.5em;">Botones</h1>
-<div class="button-container">
-    <p-button label="Submit" />
-
-    <div class="card flex">
-        <button pButton pRipple label="Submit" class="p-button-success">Entregable</button>
+<div class="conatiner_one">
+    <div class="container_two">
+        <h1 style="text-align: center;">BOTONES-ICONOS</h1>
     </div>
+    <br>
+    <a href="inicio.component.html">
+        <button class="p-button">Volver a la Página de Inicio</button>
+    </a>
+    <br>
+    <div class="container_three">
+        <div class="button-container">
+            <p-button icon="pi pi-check" />
+            <p-button icon="pi pi-bookmark" severity="secondary" />
+            <p-button icon="pi pi-search" severity="success" />
+            <p-button icon="pi pi-user" severity="info" />
+            <p-button icon="pi pi-bell" severity="warning" />
+            <p-button icon="pi pi-heart" severity="help" />
+            <p-button icon="pi pi-times" severity="danger" />
 
-    <p-button icon="pi pi-check" />
-    <p-button label="Submit" icon="pi pi-check" />
-    <p-button label="Submit" icon="pi pi-check" iconPos="right" />
+            <p-button icon="pi pi-check" [rounded]="true" />
+            <p-button icon="pi pi-bookmark" [rounded]="true" severity="secondary" />
+            <p-button icon="pi pi-search" [rounded]="true" severity="success" />
+            <p-button icon="pi pi-user" [rounded]="true" severity="info" />
+            <p-button icon="pi pi-bell" [rounded]="true" severity="warning" />
+            <p-button icon="pi pi-heart" [rounded]="true" severity="help" />
+            <p-button icon="pi pi-times" [rounded]="true" severity="danger" />
+
+            <p-button icon="pi pi-check" [rounded]="true" [outlined]="true" />
+            <p-button icon="pi pi-bookmark" [rounded]="true" severity="secondary" [outlined]="true" />
+            <p-button icon="pi pi-search" [rounded]="true" severity="success" [outlined]="true" />
+            <p-button icon="pi pi-user" [rounded]="true" severity="info" [outlined]="true" />
+            <p-button icon="pi pi-bell" [rounded]="true" severity="warning" [outlined]="true" />
+            <p-button icon="pi pi-heart" [rounded]="true" severity="help" [outlined]="true" />
+            <p-button icon="pi pi-times" [rounded]="true" severity="danger" [outlined]="true" />
+
+            <p-button icon="pi pi-check" [rounded]="true" [text]="true" [raised]="true" />
+            <p-button icon="pi pi-bookmark" [rounded]="true" [text]="true" [raised]="true" severity="secondary" />
+            <p-button icon="pi pi-search" [rounded]="true" [text]="true" [raised]="true" severity="success" />
+            <p-button icon="pi pi-user" [rounded]="true" [text]="true" [raised]="true" severity="info" />
+            <p-button icon="pi pi-bell" [rounded]="true" [text]="true" [raised]="true" severity="warning" />
+            <p-button icon="pi pi-heart" [rounded]="true" [text]="true" [raised]="true" severity="help" />
+            <p-button icon="pi pi-times" [rounded]="true" [text]="true" [raised]="true" severity="danger" />
+
+            <p-button icon="pi pi-check" [rounded]="true" [text]="true" />
+            <p-button icon="pi pi-bookmark" [rounded]="true" [text]="true" severity="secondary" />
+            <p-button icon="pi pi-search" [rounded]="true" [text]="true" severity="success" />
+            <p-button icon="pi pi-user" [rounded]="true" [text]="true" severity="info" />
+            <p-button icon="pi pi-bell" [rounded]="true" [text]="true" severity="warning" />
+            <p-button icon="pi pi-heart" [rounded]="true" [text]="true" severity="help" />
+            <p-button icon="pi pi-times" [rounded]="true" [text]="true" severity="danger" />
+        </div>
+
+    </div>
 </div>
 
 <style>
-    .button-container {
+    .conatiner_one {
+        margin: auto;
+        width: 90%;
+        background-color: #eeeef7;
+        justify-content: center;
+        padding: 15px;
+        border-radius: 1em;
+        height: auto;
+        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .container_two {
+        background-color: #8ec6ee;
+        padding: 1px;
+        border-radius: 10px;
+    }
+
+    .container_three {
+
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        color: white;
+    }
+
+    .button-container {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 10px;
+        display: grid;
+        width: 60%;
     }
 
     button {
@@ -23,7 +97,7 @@
     }
 
     .button-container p-button {
-        margin-right: 10px;
+        margin: 15px;
         /* Ajusta el espacio entre botones */
     }
 </style>
